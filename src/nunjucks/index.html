@@ -1,7 +1,9 @@
-{% extends 'layout/layout.html' %}
+{% extends 'layout/layout.html' %} 
 
 {% block body %}
 
 <h1>nunjucks body</h1>
+{% message: 'Hello!'%}
+<p>Hello {{ message | default('world') }}</p>
 
 {% endblock %}

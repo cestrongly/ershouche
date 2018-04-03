@@ -5,30 +5,20 @@
     "mocha": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "rules": {
-    "indent": [
-      "error",
-      2
-    ],
     "new-cap": "off",
     "newline-after-var": "off",
     "no-invalid-this": "off",
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "quotes": "off",
     "guard-for-in": "off",
     "no-console": "off",
     "no-undefined": "off",
     "array-bracket-spacing": "off",
     "no-unused-expressions": "off",
-    "func-style": [
-      "error",
-      "expression"
-    ],
+    "func-style": "off",
     "comma-dangle": [
       "error",
       "never"

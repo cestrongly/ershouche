@@ -31,11 +31,12 @@
   "browserslist": [
     "not ie <= 8",
     "> 1%",
-    "last 2 versions"
+    "last 5 versions"
   ],
   "scripts": {
     "build": "cross-env easy build prod",
     "start": "cross-env easy server",
+    "dev": "easy server dev",
     "lint": "eslint .",
     "fix": "eslint --fix .",
     "test": "mocha test",

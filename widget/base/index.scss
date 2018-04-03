@@ -13,6 +13,9 @@ html * {
 html,
 body {
   font-family: sans-serif;
+  display: flex;
+  display: -webkit-box;
+  border-radius: 3px;
 }
 
 html,

@@ -1,0 +1,108 @@
+/* 列表 */
+
+.infolist {
+  padding-top: .0625rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.infolist .item {}
+
+.infolist .item a {
+  height: 2.09375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: .3125rem .46875rem;
+  border-bottom: 1px solid #f3f3f3;
+  position: relative;
+}
+
+.infolist .item a .item-thumb {
+  width: 2.8125rem;
+  height: 2.09375rem;
+}
+
+.infolist .item a .item-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: .3125rem;
+}
+
+.infolist .item a .item-info .info-title {
+  height: 1.125rem;
+  line-height: .5625rem;
+  font-size: .40625rem;
+  overflow: hidden;
+  position: relative;
+  top: -.0625rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.infolist .item a .item-info .info-title strong {
+  color: #333;
+}
+
+.infolist .item a .item-info .info-desc {
+  width: 100%;
+  display: block;
+  height: .5625rem;
+  line-height: .5625rem;
+  position: relative;
+  color: #aaa;
+  font-size: .3125rem;
+  overflow: hidden;
+  top: -.03125rem;
+}
+
+.infolist .item a .item-info .info-desc-detail {
+  width: 66%;
+  color: #aaa;
+  font-size: .3125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.infolist .item a .item-info .info-desc-kind {
+  position: absolute;
+  right: 0;
+}
+
+.infolist .item a .item-info .info-desc-kind em {
+  font-size: .3125rem;
+  display: inline-block;
+}
+
+.infolist .item a .item-info .info-desc-tag-price {
+  float: left;
+  font-size: .46875rem;
+  color: #ff552e;
+  padding-right: .375rem;
+  font-weight: 700;
+}
+
+.infolist .item a .item-info .icon_right {
+  width: auto;
+  max-width: 71%;
+  float: right;
+  text-align: right;
+  font-size: 0;
+}
+
+.infolist .item a .item-info .info-desc-tag {
+  padding: 1px 1px;
+  float: none;
+  font-size: .3125rem;
+  display: inline-block;
+}
+
+.new-tag-style .new-blue {
+  color: #4CA2EB;
+  background-color: #ECF5FC;
+  border: 1px solid #ECF5FC;
+}

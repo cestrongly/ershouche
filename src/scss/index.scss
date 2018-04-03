@@ -1,4 +1,12 @@
 .title{
   color: red;
   font-size:24px;
+  display: flex;
+  border-radius: 3px;
+  transform: rotateY(45deg);
+  box-shadow: inset 1px 1px 1px 1px;
+}
+
+body {
+  display: grid;
 }

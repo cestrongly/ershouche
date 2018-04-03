@@ -1,1 +1,318 @@
-<h1>footer</h1>
+{% set
+items = [
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    },
+    {
+        href: 'javascript:void(0)',
+        img_src: 'http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg',
+        info_title: '日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快',
+        info_desc_detail: '2012年 4.74万公里',
+        info_desc_kind: '急售',
+        info_desc_tag_price: '9.5',
+        info_desc_tag_price_unit: '万',
+        info_desc_tag: '会员2年'
+    }
+]
+%}
+
+<ul class="infolist">
+    {% for item in items %}
+    <li class="item">
+        <a href="{{item.href}}">
+            <img src="{{item.img_src}}" alt="{{item.info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>{{item.info_title}}</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">{{item.info_desc_detail}}</span>
+                    <span class="info-desc-kind"><em>{{item.info_desc_kind}}</em></span>
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  <em>{{item.info_desc_tag_price}}{{item.info_desc_tag_price_unit}}</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">{{item.info_desc_tag}}</em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {% endfor %}
+
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v223cb05db8d734abeae7c05ecaaceccbb_5001c10881010731.jpg" alt="{{info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>本田 思域 2012款 1.8 自动 豪华版VTI-首付低 利率低 提车快</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2013年 4.5万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>急售</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  9.98
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">会员2年</em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v2a7eb00f8440d4d3aa9cea414e55e92a7_932eff2b72a6a5d8.jpg" alt="{{info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>丰田 凯美瑞 2006款 200E</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2006年 15万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>置顶</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  2.58
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <!-- <em class="new-blue">
+                      {{new-tag}}
+                    </em>-->
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v21fa0ebbe315044a8bd40726308acdb89_4cff7fcdb640584a.jpg" alt="别克 英朗GT 2010款 GT 1.6T 新锐运动版-首付低 利率低 提车快"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>别克 英朗GT 2010款 GT 1.6T 新锐运动版-首付低 利率低 提车快</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2010年 8.7万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>今天</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+
+                  5.6
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">
+                      会员2年
+                    </em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v2272d6c7e335b40a0994ada3fb126ceaa_798c3666d6e04c57.jpg" alt="{{info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>日产 逍客 2012款 2.0 CVT 雷两驱XV-首付低 利率低 提车快</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2012年 4.74万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>急售</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  9.5
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">会员2年</em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v223cb05db8d734abeae7c05ecaaceccbb_5001c10881010731.jpg" alt="{{info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>本田 思域 2012款 1.8 自动 豪华版VTI-首付低 利率低 提车快</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2013年 4.5万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>急售</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  9.98
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">会员2年</em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v2a7eb00f8440d4d3aa9cea414e55e92a7_932eff2b72a6a5d8.jpg" alt="{{info-title}}"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>丰田 凯美瑞 2006款 200E</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2006年 15万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>置顶</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+                  2.58
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <!-- <em class="new-blue">
+                      {{new-tag}}
+                    </em>-->
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    <li class="item">
+        <a href="javascript:void(0)">
+            <img src="http://pic1.58cdn.com.cn/p1/big/n_v21fa0ebbe315044a8bd40726308acdb89_4cff7fcdb640584a.jpg" alt="别克 英朗GT 2010款 GT 1.6T 新锐运动版-首付低 利率低 提车快"
+                 class="item-thumb">
+            <dl class="item-info">
+                <dt class="info-title">
+                    <strong>别克 英朗GT 2010款 GT 1.6T 新锐运动版-首付低 利率低 提车快</strong>
+                </dt>
+                <dd class="info-desc">
+                    <span class="info-desc-detail">2010年 8.7万公里 </span>
+                    <span class="info-desc-kind">
+                  <em>今天</em>
+                </span>
+
+                </dd>
+                <dd class="info-desc">
+                <span class="info-desc-tag-price">
+
+                  5.6
+                  <em>万</em>
+                </span>
+                    <span class="icon_right new-tag-style">
+                  <span class="info-desc-tag">
+                    <em class="new-blue">
+                      会员2年
+                    </em>
+                  </span>
+                </span>
+                </dd>
+            </dl>
+        </a>
+    </li>
+</ul>

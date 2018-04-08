@@ -1,2 +1,17 @@
+.filter-fixed {
+  .filter-wrapper {
+    position: fixed;
+    top:0;
+    transition:  top .3s ease-out 0s;
+  }
 
+  .animate {
+    top:-100px;
+    transition: top .3s ease-out 0s;
+  }
+
+  .infolist-wrapper {
+    margin-top: 46.88px;
+  }
+}
 

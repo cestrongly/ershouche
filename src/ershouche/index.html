@@ -5,19 +5,32 @@
 {% block body %}
 
 <div class="container js_container">
-    <header>
-        {% include 'header/index.html' %}
-    </header>
-    <!-- 筛选模块 -->
-    <section class="filter-wrapper js_filter">
+
+    <!-- body header begin -->
+    {% include 'header/index.html' %}
+    <!-- body header end -->
+
+    <!-- filter begin -->
+    <section id="filterOuter" class="filter-wrapper js_filter">
         {% include 'filter/index.html' %}
     </section>
-    <!-- 筛选模块 end -->
-    <!-- 列表模块 -->
+    <!-- filter end -->
+
+    <!-- car list begin -->
     <section class="infolist-wrapper">
         {% include 'infolist/index.html' %}
     </section>
-    <!-- 列表模块 end-->
+    <!-- car list end-->
+
 </div>
 <div id="mask"></div>
+
+
+{% endblock %}
+
+{% block script %}
+<!--<script src="../../asset/js/jquery-3.2.1.min.js"></script>-->
+<script>
+
+</script>
 {% endblock %}

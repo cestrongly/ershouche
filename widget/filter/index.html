@@ -1,3 +1,61 @@
+{% set 
+    _filter = {
+        types: [
+            {
+                href: 'javascript:;',
+                text: '全部'
+            },
+            {
+                href: 'javascript:;',
+                text: '轿车'
+            },
+            {
+                href: 'javascript:;',
+                text: '越野车/SUV'
+            },
+            {
+                href: 'javascript:;',
+                text: 'MPV'
+            },
+            {
+                href: 'javascript:;',
+                text: '跑车'
+            },
+            {
+                href: 'javascript:;',
+                text: '面包车'
+            },
+            {
+                href: 'javascript:;',
+                text: '皮卡'
+            },
+            {
+                href: 'javascript:;',
+                text: '新能源'
+            },
+            {
+                href: 'javascript:;',
+                text: '工程车'
+            },
+            {
+                href: 'javascript:;',
+                text: '货车'
+            },
+            {
+                href: 'javascript:;',
+                text: '客车'
+            },
+            {
+                href: 'javascript:;',
+                text: '三轮机动车'
+            },
+            {
+                href: 'javascript:;',
+                text: '老年代步车'
+            }
+        ]
+    }
+%}
 <div class="filter">
     <div class="con-filter js_con-filter">
         <!-- 类型 -->
@@ -5,45 +63,11 @@
             <div class="con-filter-inner">
                 <div id="scroll-inner-1" class="scroll-inner">
                     <ul>
-                        <li class="selected">
-                            <a href="javascript:void(0);" class="single">全部</a>
+                        {% for type in _filter.types %}
+                        <li class="">
+                            <a href="{{type.href}}" class="single">{{type.text}}</a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">轿车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">越野车/SUV</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">MPV</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">跑车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">面包车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">皮卡</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">新能源</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">工程车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">货车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">客车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">三轮机动车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">老年代步车</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import './../../asset/iconfont/iconfont.css'
 import './index.scss'
 
 import $ from './../../asset/js/jquery-3.2.1.min'
+import filter from './../../widget/filter/index.js'
 
 let Page = function () {
     let isAddStickyStyle = false;
@@ -15,6 +16,7 @@ let Page = function () {
         init: function () {
             this.onScorll();
             this.setSticky();
+            filter.init();
         },
         setSticky: function () {
             let scrollTop = $(document).scrollTop();
@@ -27,7 +29,7 @@ let Page = function () {
                     _animate.addClass('animate');
                     setTimeout(function () {
                         _animate.removeClass('animate');
-                    }, 300);
+                    }, 100);
                 }
             } else {
                 if (!isRemoveStickyStyle) {

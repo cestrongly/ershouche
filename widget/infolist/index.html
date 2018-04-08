@@ -467,25 +467,26 @@ items = [
     {% for item in items %}
     <li class="item">
         <a href="{{item.href}}">
-            <img src="{{item.img_src}}" alt="{{item.info-title}}"
-                 class="item-thumb">
+            <img src="{{item.img_src}}" alt="{{item.info-title}}" class="item-thumb">
             <dl class="item-info">
                 <dt class="info-title">
                     <strong>{{item.info_title}}</strong>
                 </dt>
                 <dd class="info-desc">
                     <span class="info-desc-detail">{{item.info_desc_detail}}</span>
-                    <span class="info-desc-kind"><em>{{item.info_desc_kind}}</em></span>
+                    <span class="info-desc-kind">
+                        <em>{{item.info_desc_kind}}</em>
+                    </span>
                 </dd>
                 <dd class="info-desc">
-                <span class="info-desc-tag-price">
-                  <em>{{item.info_desc_tag_price}}{{item.info_desc_tag_price_unit}}</em>
-                </span>
+                    <span class="info-desc-tag-price">
+                        <em>{{item.info_desc_tag_price}}{{item.info_desc_tag_price_unit}}</em>
+                    </span>
                     <span class="icon_right new-tag-style">
-                  <span class="info-desc-tag">
-                    <em class="new-blue">{{item.info_desc_tag}}</em>
-                  </span>
-                </span>
+                        <span class="info-desc-tag">
+                            <em class="new-blue">{{item.info_desc_tag}}</em>
+                        </span>
+                    </span>
                 </dd>
             </dl>
         </a>

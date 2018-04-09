@@ -67,13 +67,15 @@ const scrollFunc = function (evt) {
 let filter = function () {
   var scrollOptions = {};
   // 类型
-  var myScroll_1 = new IScroll('#scroll-inner-1', scrollOptions);
-  // 品牌
-  var myScroll_2 = new IScroll('#scroll-inner-2', scrollOptions);
-  // 价格
-  var myScroll_3 = new IScroll('#scroll-inner-3', scrollOptions);
-  // 更多
-  var myScroll_4 = new IScroll('#scroll-inner-4', scrollOptions);
+  var myScroll_1 = new IScroll('#scroll-inner-1', scrollOptions),
+    // 品牌
+    myScroll_2 = new IScroll('#scroll-inner-2', scrollOptions),
+    // 价格
+    myScroll_3 = new IScroll('#scroll-inner-3', scrollOptions),
+    // 更多
+    myScroll_4 = new IScroll('#scroll-inner-4', scrollOptions);
+
+  let isShowHotBrandList = false;
 
   var _ = {
 
@@ -88,6 +90,7 @@ let filter = function () {
       // })
 
       this.letterBoxTouchMove();
+      this.hotBrandClick();
     },
 
     /**
@@ -136,34 +139,49 @@ let filter = function () {
     },
 
     letterBoxTouchMove: function () {
-      $('.js_con-filter').on('touchmove', '.js_letterlist', function (e) {
-        let letterList = $('.js_container').find('.js_letterlist')[0];
-        // letterList.addEventListener('touchmove', function (e) {
-        //   e.returnValue = true;
-        // }, false);
-        e.cancelBubble = true;
-        e.stopPropagation();
-        e.preventDefault();
+      $('.js_con-filter').on('touchmove', '.js_letter_list', function (e) {
+        let letterList = $('.js_container').find('.js_letter_list')[0];
+        letterList.addEventListener('touchmove', function (e) {
+          e.returnValue = true;
+        }, false);
+        // e.cancelBubble = true;
+        // e.stopPropagation();
+        // e.preventDefault();
 
         // 禁用默认事件 滑动
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
         // 禁用鼠标滚动事件
         // disabledMouseWheel();
-        document.addEventListener('mousewheel', function (e) { e.preventDefault(); }, false);
+        // document.addEventListener('mousewheel', function (e) { e.preventDefault(); }, false);
 
-        $(this).css({'background': 'rgb(238,238,238)'});
+        $(this).css({ 'background': 'rgb(238,238,238)' });
         // let letter = $(e.target).text();
         let moveEndX = e.originalEvent.changedTouches[0].clientX,
-        moveEndY = e.originalEvent.changedTouches[0].clientY;    
-        let index = parseInt((moveEndY-48)/13.88);
+          moveEndY = e.originalEvent.changedTouches[0].clientY;
+        let index = parseInt((moveEndY - 48) / 13.88);
         let letter_text = $(this).find('li').eq(index).text();
-        let selector = '#letter_'+ (letter_text === '#'? '0' : letter_text.toLowerCase());
-        myScroll_2.scrollToElement(selector,null,true,-48,null);
+        let selector = '#letter_' + (letter_text === '#' ? '0' : letter_text.toLowerCase());
+        myScroll_2.scrollToElement(selector, null, true, -48, null);
       });
 
       $('.js_con-filter').on('touchend', '.js_letterlist', function (e) {
-        $(this).css({'background': '#fff'});
+        $(this).css({ 'background': '#fff' });
       });
+    },
+
+    hotBrandClick: function () {
+      let self = this;
+      $('.js_container').on('click touchend', '.js_hot_brand .title', function (e) {
+        if (!isShowHotBrandList) {
+          isShowHotBrandList = true;
+          $(this).next().show();
+          $(this).addClass('show');
+        } else {
+          isShowHotBrandList = false;
+          $(this).next().hide();
+          $(this).removeClass('show');
+        }
+      })
     },
 
     /**

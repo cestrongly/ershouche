@@ -56,9 +56,8 @@
     padding-left: 10px;
     background: #f8f8f8;
     color: #333;
-  }
-  // 字母索引
-  .letterlist {
+  } // 字母索引
+  .letter_list {
     position: absolute;
     right: 0;
     width: .5rem;
@@ -72,13 +71,10 @@
       font-size: .37rem;
       cursor: pointer;
     }
-  }
-  // 热门品牌
+  } // 热门品牌
   .hot_brand {
-    dl {
-
-    }
-    dt {
+    dl {}
+    .title {
       margin-bottom: 0;
       position: relative;
       height: 35px;
@@ -94,12 +90,20 @@
         position: absolute;
         right: .46875rem;
         top: 50%;
-        margin-top: -.15625rem;
-        -webkit-transform: rotate(-180deg);
+        margin-top: -.0625rem;
+        transform: rotate(-180deg);
+        transform-origin: center 2px;
+        transition: transform .3s ease-out 0s;
+      }
+      &.show {
+        &:after {
+          transform: rotate(0deg);
+        }
       }
     }
     dd {
-      flex:1;
+      flex: 1;
+      display: none;
     }
     .links {
       display: block;
@@ -111,8 +115,8 @@
         padding-left: .46875rem;
         text-align: left;
         display: block;
-        color:inherit;
-        font-size: 14px; 
+        color: inherit;
+        font-size: 14px;
         border-bottom: 1px solid #f3f3f3;
         width: inherit;
         line-height: 1.25rem;
@@ -121,9 +125,8 @@
         box-sizing: border-box;
       }
     }
-  } 
+  }
 }
-
 
 .con-filter ul {
   width: 100%;

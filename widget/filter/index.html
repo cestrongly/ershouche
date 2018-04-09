@@ -227,7 +227,7 @@
                             <a class="single" href="javascript:;" data-id="aodi">全部</a>
                         </div>
                         <!-- 热门品牌 -->
-                        <div class="hot_brand">
+                        <div class="hot_brand js_hot_brand">
                             <dl>
                                 <dt class="title">热门品牌</dt>
                                 <dd>
@@ -255,7 +255,7 @@
                     </div>
                 </div>
                 {# 字母索引 #}
-                <ul class="letterlist js_letterlist">
+                <ul class="letter_list js_letter_list">
                     {% for letter in _filter.brand_list %}
                     <li>{{letter.text}}</li>
                     {% endfor %}

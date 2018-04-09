@@ -50,7 +50,7 @@ const disabledMouseWheel = function () {
   window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome  
 }
 
-const scrollFunc = function(evt) {
+const scrollFunc = function (evt) {
   evt = evt || window.event;
   if (evt.preventDefault) {
     // Firefox  
@@ -66,9 +66,13 @@ const scrollFunc = function(evt) {
 
 let filter = function () {
   var scrollOptions = {};
+  // 类型
   var myScroll_1 = new IScroll('#scroll-inner-1', scrollOptions);
+  // 品牌
   var myScroll_2 = new IScroll('#scroll-inner-2', scrollOptions);
+  // 价格
   var myScroll_3 = new IScroll('#scroll-inner-3', scrollOptions);
+  // 更多
   var myScroll_4 = new IScroll('#scroll-inner-4', scrollOptions);
 
   var _ = {
@@ -77,6 +81,13 @@ let filter = function () {
       var self = this;
       self.filter();
       self.pageEvent();
+
+      // $('.js_con-filter').on('click', '.brandlist', function () {
+      //   // 滚动到目标元素
+      //   myScroll_2.scrollToElement(document.querySelector('#letter_b'))
+      // })
+
+      this.letterBoxTouchMove();
     },
 
     /**
@@ -124,6 +135,37 @@ let filter = function () {
       })
     },
 
+    letterBoxTouchMove: function () {
+      $('.js_con-filter').on('touchmove', '.js_letterlist', function (e) {
+        let letterList = $('.js_container').find('.js_letterlist')[0];
+        // letterList.addEventListener('touchmove', function (e) {
+        //   e.returnValue = true;
+        // }, false);
+        e.cancelBubble = true;
+        e.stopPropagation();
+        e.preventDefault();
+
+        // 禁用默认事件 滑动
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        // 禁用鼠标滚动事件
+        // disabledMouseWheel();
+        document.addEventListener('mousewheel', function (e) { e.preventDefault(); }, false);
+
+        $(this).css({'background': 'rgb(238,238,238)'});
+        // let letter = $(e.target).text();
+        let moveEndX = e.originalEvent.changedTouches[0].clientX,
+        moveEndY = e.originalEvent.changedTouches[0].clientY;    
+        let index = parseInt((moveEndY-48)/13.88);
+        let letter_text = $(this).find('li').eq(index).text();
+        let selector = '#letter_'+ (letter_text === '#'? '0' : letter_text.toLowerCase());
+        myScroll_2.scrollToElement(selector);
+      });
+
+      $('.js_con-filter').on('touchend', '.js_letterlist', function (e) {
+        $(this).css({'background': '#fff'});
+      });
+    },
+
     /**
      * 页面事件
      */
@@ -142,7 +184,7 @@ let filter = function () {
         // 恢复默认事件 鼠标滚动
         document.addEventListener('mousewheel', function (e) {
           e.returnValue = true;
-       }, false);
+        }, false);
       });
     }
   }

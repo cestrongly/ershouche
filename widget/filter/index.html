@@ -54,7 +54,150 @@
                 text: '老年代步车'
             }
         ],
-        letterlist: ['#','A','B','C','D','E','F','G']
+        hot_brand_list: [
+            {
+                href:'javascript:;',
+                text: '全部'
+            },
+            {
+                href:'javascript:;',
+                text: '大众'
+            },
+            {
+                href:'javascript:;',
+                text: '本田'
+            },
+            {
+                href:'javascript:;',
+                text: '别克'
+            },
+            {
+                href:'javascript:;',
+                text: '丰田'
+            },
+            {
+                href:'javascript:;',
+                text: '福特'
+            },
+            {
+                href:'javascript:;',
+                text: '日产'
+            },
+            {
+                href:'javascript:;',
+                text: '奇瑞'
+            },
+            {
+                href:'javascript:;',
+                text: '宝马'
+            },
+            {
+                href:'javascript:;',
+                text: '现代'
+            },
+            {
+                href:'javascript:;',
+                text: '奥迪'
+            },
+            {
+                href:'javascript:;',
+                text: '马自达'
+            },
+            {
+                href:'javascript:;',
+                text: '比亚迪'
+            },
+            {
+                href:'javascript:;',
+                text: '铃木'
+            },
+            {
+                href:'javascript:;',
+                text: '雪铁龙'
+            },
+            {
+                href:'javascript:;',
+                text: '吉利'
+            },
+            {
+                href:'javascript:;',
+                text: '奔驰'
+            },
+            {
+                href:'javascript:;',
+                text: '长安'
+            },
+            {
+                href:'javascript:;',
+                text: '众泰'
+            },
+            {
+                href:'javascript:;',
+                text: '雪佛兰'
+            },
+            {
+                href:'javascript:;',
+                text: '金杯'
+            },
+            {
+                href:'javascript:;',
+                text: '起亚'
+            }
+        ],
+        brand_list: [
+            {
+                id: 'letter_0',
+                text: '#',
+                list: [
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    }
+                ] 
+            },
+            {
+                id: 'letter_a',
+                text: 'A',
+                list: [
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    },
+                    {
+                        href: 'javascript:;',
+                        text: '奥迪'
+                    }
+                ] 
+            }
+        ]
     }
 %}
 <div class="filter">
@@ -78,199 +221,46 @@
             <div class="con-filter-inner">
 
                 <div id="scroll-inner-2" class="scroll-inner js_scroll-inner">
-                    <div>
+                    <div class="scroll-inner">
                         <!-- 全部品牌 -->
                         <div class="allbrand">
-                            <a class="single" href="javascript:;" data-id="aodi">全部品牌</a>
+                            <a class="single" href="javascript:;" data-id="aodi">全部</a>
                         </div>
                         <!-- 热门品牌 -->
-                        <div class="hotbrand">
+                        <div class="hot_brand">
                             <dl>
-                                <dt>热门品牌</dt>
-                                <dd></dd>
+                                <dt class="title">热门品牌</dt>
+                                <dd>
+                                    <div class="links">
+                                        {% for link in _filter.hot_brand_list %}
+                                        <a href="{{link.href}}">{{link.text}}</a>
+                                        {% endfor %}
+                                    </div>
+                                </dd>
                             </dl>
                         </div>
-                        <ul class="brandlist">
-                            <span class="letter" id="letter_0">#</span>
+                        <ul class="brand_list">
                             <li>
-                                <a class="single" href="javascript:;" data-id="aodi">奥迪</a>
+                                <a class="single" href="javascript:;" data-id="aodi">热门车系</a>
                             </li>
-                            <li class="selected">
-                                <a class="single" href="http://m.58.com/liuzhou/alpinac/" data-id="alpinac">ALPINA</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/aeflmo/" data-id="aeflmo">阿尔法·罗密欧</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/aokesi/" data-id="aokesi">奥克斯</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/asdmdc/" data-id="asdmdc">阿斯顿·马丁</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/anchi/" data-id="anchi">安驰</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/acschnitzer/" data-id="acschnitzer">AC Schnitzer</a>
-                            <span class="letter" id="letter_a">A</span>
-                            <li>
-                                <a class="single" href="javascript:;" data-id="aodi">奥迪</a>
-                            </li>
-                            <li class="selected">
-                                <a class="single" href="http://m.58.com/liuzhou/alpinac/" data-id="alpinac">ALPINA</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/aeflmo/" data-id="aeflmo">阿尔法·罗密欧</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/aokesi/" data-id="aokesi">奥克斯</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/asdmdc/" data-id="asdmdc">阿斯顿·马丁</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/anchi/" data-id="anchi">安驰</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/acschnitzer/" data-id="acschnitzer">AC Schnitzer</a>
-                            </li>
-                            <span class="letter" id="letter_b">B</span>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bentian/" data-id="bentian">本田</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bieke/" data-id="bieke">别克</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoma/" data-id="baoma">宝马</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biyadi/" data-id="biyadi">比亚迪</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benchikc/" data-id="benchikc">奔驰</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biaozhi/" data-id="biaozhi">标致</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoshijie/" data-id="baoshijie">保时捷</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bqzzsuvq/" data-id="bqzzsuvq">北汽制造</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benteng/" data-id="benteng">奔腾</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baolong/" data-id="baolong">宝龙</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baojun/" data-id="baojun">宝骏</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baowosuvq/" data-id="baowosuvq">宝沃</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bisumpv/" data-id="bisumpv">比速汽车</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/beiqiruilimp/" data-id="beiqiruilimp">北汽瑞丽</a>
-                            </li>
-                            <span class="letter" id="letter_c">C</span>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bentian/" data-id="bentian">本田</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bieke/" data-id="bieke">别克</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoma/" data-id="baoma">宝马</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biyadi/" data-id="biyadi">比亚迪</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benchikc/" data-id="benchikc">奔驰</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biaozhi/" data-id="biaozhi">标致</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoshijie/" data-id="baoshijie">保时捷</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bqzzsuvq/" data-id="bqzzsuvq">北汽制造</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benteng/" data-id="benteng">奔腾</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baolong/" data-id="baolong">宝龙</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baojun/" data-id="baojun">宝骏</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baowosuvq/" data-id="baowosuvq">宝沃</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bisumpv/" data-id="bisumpv">比速汽车</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/beiqiruilimp/" data-id="beiqiruilimp">北汽瑞丽</a>
-                            </li>
-                            <span class="letter" id="letter_d">D</span>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bentian/" data-id="bentian">本田</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bieke/" data-id="bieke">别克</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoma/" data-id="baoma">宝马</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biyadi/" data-id="biyadi">比亚迪</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benchikc/" data-id="benchikc">奔驰</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/biaozhi/" data-id="biaozhi">标致</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baoshijie/" data-id="baoshijie">保时捷</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bqzzsuvq/" data-id="bqzzsuvq">北汽制造</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/benteng/" data-id="benteng">奔腾</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baolong/" data-id="baolong">宝龙</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baojun/" data-id="baojun">宝骏</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/baowosuvq/" data-id="baowosuvq">宝沃</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/bisumpv/" data-id="bisumpv">比速汽车</a>
-                            </li>
-                            <li>
-                                <a class="single" href="http://m.58.com/liuzhou/beiqiruilimp/" data-id="beiqiruilimp">北汽瑞丽</a>
-                            </li>
+                            {% for letter in _filter.brand_list %}
+                            <span class="letter" id="{{letter.id}}">{{letter.text}}</span>
+                                {% for item in letter.list %}
+                                <li>
+                                    <a class="single" href="{{item.href}}">{{item.text}}</a>
+                                </li>
+                                {% endfor %}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
+                {# 字母索引 #}
                 <ul class="letterlist js_letterlist">
-                    {% for letter in _filter.letterlist %}
-                    <li>{{letter}}</li>
+                    {% for letter in _filter.brand_list %}
+                    <li>{{letter.text}}</li>
                     {% endfor %}
                 </ul>
+                {# 字母索引 end #}
             </div>
         </div>
         <!-- 价格 -->

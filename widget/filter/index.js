@@ -158,7 +158,7 @@ let filter = function () {
         let index = parseInt((moveEndY-48)/13.88);
         let letter_text = $(this).find('li').eq(index).text();
         let selector = '#letter_'+ (letter_text === '#'? '0' : letter_text.toLowerCase());
-        myScroll_2.scrollToElement(selector);
+        myScroll_2.scrollToElement(selector,null,true,-48,null);
       });
 
       $('.js_con-filter').on('touchend', '.js_letterlist', function (e) {

@@ -197,6 +197,28 @@
                     }
                 ] 
             }
+        ],
+        price_list: [
+            {
+                href: 'javascript:;',
+                text: '全部'
+            },
+            {
+                href: 'javascript:;',
+                text: '3万元以内'
+            },
+            {
+                href: 'javascript:;',
+                text: '3-5万元'
+            },
+            {
+                href: 'javascript:;',
+                text: '5-7万元'
+            },
+            {
+                href: 'javascript:;',
+                text: '7万元以上'
+            }
         ]
     }
 %}
@@ -274,21 +296,11 @@
                             <input class="bigprice" type="tel" value="" maxlength="9">万
                             <a href="javascript:;" class="queding">确定</a>
                         </li>
+                        {% for price in _filter.price_list%}
                         <li>
-                            <a class="single" href="/liuzhou/ershouche/" data-id="all">全部</a>
+                            <a class="single" href="{{price.href}}" data-id="all">{{price.text}}</a>
                         </li>
-                        <li>
-                            <a class="single" href="http://m.58.com/liuzhou/ershouche/pve_5864_0_3/" data-id="">3万元以内</a>
-                        </li>
-                        <li>
-                            <a class="single" href="http://m.58.com/liuzhou/ershouche/pve_5864_3_5/" data-id="">3-5万元</a>
-                        </li>
-                        <li>
-                            <a class="single" href="http://m.58.com/liuzhou/ershouche/pve_5864_5_7/" data-id="">5-7万元</a>
-                        </li>
-                        <li>
-                            <a class="single" href="http://m.58.com/liuzhou/ershouche/pve_5864_7_999999/" data-id="">7万元以上</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

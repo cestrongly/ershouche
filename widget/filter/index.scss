@@ -125,6 +125,47 @@
         box-sizing: border-box;
       }
     }
+  } // 价格
+  .shaixuan_li {
+    border-bottom: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    display: block;
+    height: 1.25rem;
+    padding: 0 .46875rem;
+    font-size: .34375rem;
+    .small_price,
+    .bigprice {
+      width: 1.25rem;
+      height: .58rem;
+      margin-right: 10px;
+      margin-top: .25rem;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: .58rem;
+      -webkit-appearance: none;
+      -webkit-user-select: text;
+    }
+    .bigprice {
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+    .queding {
+      display: block;
+      position: absolute;
+      width: 1.5rem;
+      height: .65rem;
+      background-color: #ccc;
+      line-height: .65rem;
+      text-align: center;
+      top: 50%;
+      right: .46875rem;
+      margin-top: -.325rem;
+      color: #fff;
+      padding: 0;
+      &:active {
+        background: rgba(0,0,0,.05);
+      }
+    }
   }
 }
 

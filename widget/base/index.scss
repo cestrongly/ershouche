@@ -92,6 +92,12 @@ body {
   font-size:12px;
 }
 
+html.show-mask {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 #mask {
   display: none;
   width: 100%;

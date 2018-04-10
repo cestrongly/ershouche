@@ -125,6 +125,7 @@ let filter = function () {
         document.addEventListener('mousewheel', function (e) { e.preventDefault(); }, false);
 
         $('#mask').show();
+        $('html').addClass('show-mask');
         // $('.js_container').addClass('filter-fixed');
         $(this).css({
           'position': 'fixed',
@@ -252,6 +253,7 @@ let filter = function () {
         $('.js_con-filter-wrapper').addClass('hide');
         $('.js_nav_filter').find('li').removeClass('active');
         $(mask).hide();
+        $('html').removeClass('show-mask');
 
         $('.js_filter').attr('style', '');
 

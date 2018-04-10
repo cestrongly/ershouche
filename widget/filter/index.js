@@ -73,7 +73,19 @@ let filter = function () {
     // 价格
     myScroll_3 = new IScroll('#scroll-inner-3', scrollOptions),
     // 更多
-    myScroll_4 = new IScroll('#scroll-inner-4', scrollOptions);
+    myScroll_4 = new IScroll('#scroll-inner-4', scrollOptions),
+
+    // 更多
+    myScroll_4_1 = new IScroll('#scroll-inner-4-1', scrollOptions),
+
+    // 更多
+    myScroll_4_2 = new IScroll('#scroll-inner-4-2', scrollOptions),
+
+    // 更多
+    myScroll_4_3 = new IScroll('#scroll-inner-4-3', scrollOptions),
+
+    // 更多
+    myScroll_4_4 = new IScroll('#scroll-inner-4-4', scrollOptions);
 
   let isShowHotBrandList = false;
 
@@ -83,14 +95,11 @@ let filter = function () {
       var self = this;
       self.filter();
       self.pageEvent();
-
-      // $('.js_con-filter').on('click', '.brandlist', function () {
-      //   // 滚动到目标元素
-      //   myScroll_2.scrollToElement(document.querySelector('#letter_b'))
-      // })
-
       this.letterBoxTouchMove();
       this.hotBrandClick();
+      self.moreChoiceClick();
+      self.filterMoreContentClick();
+      self.filterMoreContentBack();
     },
 
     /**
@@ -135,8 +144,8 @@ let filter = function () {
         // 激活当前导航
         item.addClass('active');
         // $(this).find('.js_con-filter').children(".js_con-filter-wrapper").addClass('hide');
-        var conFilter = $(this).find('.js_con-filter').children(".js_con-filter-wrapper")[index];
-        $(conFilter).removeClass('hide').siblings().addClass('hide')
+        var conFilter = $(this).find('.js_con-filter').children('.js_con-filter-wrapper')[index];
+        $(conFilter).removeClass('hide').siblings('.js_con-filter-wrapper').addClass('hide')
 
         self.scrollRefresh();
       })
@@ -195,6 +204,45 @@ let filter = function () {
     },
 
     /**
+     * 更多筛选
+     */
+    moreChoiceClick: function () {
+      var self = this;
+      $('.js_container').on('click', '#filter-more li', function (e) {
+        if ($(this).hasClass('filter_more-item-type1')) {
+          if($(e.target).hasClass('choice-box')) {
+            $(e.target).addClass('choice-box-active').siblings().removeClass('choice-box-active');
+          }
+        } else {
+          var moreTargetIDSelector = '#' + $(this).find('a').data('click-from');
+          $(moreTargetIDSelector).removeClass('hide').animate({ 'left': '0' }, 300);
+          $('.js_container').find('#filter-more').animate({ 'left': '-100%' }, 300);
+        }
+      });
+    },
+
+    /**
+     * 更多筛选 内容
+     */
+    filterMoreContentClick: function () {
+      var self = this;
+      $('.js_container').on('click', '.js_filter-more-content li', function (e) {
+        $(this).addClass('selected').siblings().removeClass('selected');
+        var selectedText = $(this).text();
+        var targetSelector = $(this).closest('.js_filter-more-content').attr('id');
+        $('.js_container').find('#filter-more [data-click-from=' + targetSelector +'] .choice').text(selectedText);
+        $('.js_container').find('#filter-more').animate({ 'left': '0' }, 300);
+        $(this).closest('.js_filter-more-content').animate({'left':'100%'},300);
+      })
+    },
+    filterMoreContentBack: function () {
+      $('.js_container').on('click', '.js_filter-more-content .btn-back-wrapper a', function (e) {
+        $('.js_container').find('#filter-more').animate({ 'left': '0' }, 300);
+        $(this).closest('.js_filter-more-content').animate({'left':'100%'},300);
+      });
+    },
+
+    /**
      * 页面事件
      */
     pageEvent: function () {
@@ -205,7 +253,7 @@ let filter = function () {
         $('.js_nav_filter').find('li').removeClass('active');
         $(mask).hide();
 
-        $('.js_filter').attr('style','');
+        $('.js_filter').attr('style', '');
 
         // 恢复默认事件 滑动
         document.addEventListener('touchmove', function (e) {

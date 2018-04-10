@@ -21,7 +21,8 @@
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
-    position: relative;
+    position: absolute;
+    z-index: 999;
     width: 100%;
   }
   .scroll-inner {
@@ -163,8 +164,94 @@
       color: #fff;
       padding: 0;
       &:active {
-        background: rgba(0,0,0,.05);
+        background: rgba(0, 0, 0, .05);
       }
+    }
+  } // 更多
+  .filter-more,
+  .filter-more-content {
+    // transition: all .3s ease-out 0s;
+    .con-filter-inner {
+      height: 9.0625rem;
+      width: 100%;
+    }
+  }
+  .filter-more {
+    li {
+      em {
+        float: right;
+        .choice-box {
+          display: inline-block;
+          padding: .125rem .375rem;
+          background-color: #ededed;
+          border-radius: 3px;
+          line-height: .34375rem;
+          margin-left: .15625rem;
+          &.choice-box-active {
+            background-color: #ffeeea;
+            color: #ff552e;
+            border: 1px solid #ff552e;
+            box-sizing: border-box;
+          }
+        }
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        border-top: 5px solid #e6e6e6;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        position: absolute;
+        right: .46875rem;
+        top: .54688rem;
+        transform: rotate(-90deg);
+      }
+    }
+    .filter_more-item-type1 {
+      &:after {
+        content: none;
+      }
+    }
+    .choice {
+      float: right;
+      margin-right: .5rem;
+    }
+  } // 更多更多
+  .filter-more-content {
+    position: absolute;
+    z-index: 998;
+    left: 100%;
+    .filter_more_color {
+      em {
+        display: inline-block;
+        width: .375rem;
+        height: .375rem;
+        margin-right: .15625rem;
+        position: relative;
+        top: .0625rem;
+      }
+    }
+  }
+  .btn-submit-wrapper,
+  .btn-back-wrapper {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #f6f6ff;
+    padding: .40625rem;
+    box-sizing: border-box;
+    a {
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ff552e;
+      border-radius: 0;
+      height: 1.09375rem;
+      width: 3.4375rem;
+      line-height: 1.09375rem;
+      color: #fff;
+      display: block;
+      font-size: .40625rem;
     }
   }
 }
@@ -206,9 +293,7 @@
 
 .selected a {
   color: #ff552e
-}
-
-///* 导航 */
+} ///* 导航 */
 .nav-filter {
   display: -webkit-box;
   display: -webkit-flex;

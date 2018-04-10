@@ -306,107 +306,98 @@
             </div>
         </div>
         <!-- 更多 -->
-        <div class="con-filter-wrapper hide js_con-filter-wrapper">
+        <div class="con-filter-wrapper hide js_con-filter-wrapper filter-more" id="filter-more">
             <div class="con-filter-inner">
                 <div id="scroll-inner-4" class="scroll-inner js_scroll-inner">
                     <ul>
                         <li>
-                            <a href="javascript:void(0);" class="single">更多</a>
+                            <a href="javascript:void(0);" class="single" data-click-from="filter-more-cheling">
+                                车龄
+                                <span class="choice">车龄</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">轿车</a>
+                            <a href="javascript:void(0);" class="single" data-click-from="filter-more-pailiang">
+                                排量
+                                <span class="choice">排量</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">越野车/SUV</a>
+                            <a href="javascript:void(0);" class="single" data-click-from="filter-more-licheng">
+                                里程
+                                <span class="choice">里程</span>
+                            </a>
+                        </li>
+                        <li class="filter_more-item-type1">
+                            <a href="javascript:void(0);" class="single">
+                                变速箱
+                                <em>
+                                    <span class="choice-box choice-box-active">不限</span>
+                                    <span class="choice-box">手动</span>
+                                    <span class="choice-box">自动</span>
+                                </em>
+                            </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">MPV</a>
+                            <a href="javascript:void(0);" class="single" data-click-from="filter-more-color">
+                                颜色
+                                <span class="choice">颜色</span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">跑车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">面包车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">皮卡</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">新能源</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">工程车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">货车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">客车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">三轮机动车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">老年代步车</a>
-                        </li>
+                        <li class="filter_more-item-type1">
+                            <a href="javascript:void(0);" class="single">
+                                来源
+                                <em>
+                                    <span class="choice-box choice-box-active">不限</span>
+                                    <span class="choice-box">个人</span>
+                                    <span class="choice-box">商家</span>
+                                </em>
+                            </a>
+                        </li>                                                           
                     </ul>
                 </div>
+            </div>
+            <div class="btn-submit-wrapper">
+                <a href="javascript:;">筛 选</a>
             </div>
         </div>
 
         {#  更多的更多 车龄 #}
-        <div class="con-filter-wrapper hide js_con-filter-wrapper">
+        <div class="con-filter-wrapper filter-more-content js_filter-more-content" id="filter-more-cheling">
             <div class="con-filter-inner">
-                <div id="scroll-inner-4" class="scroll-inner js_scroll-inner">
+                <div id="scroll-inner-4-1" class="scroll-inner js_scroll-inner">
                     <ul>
+                        {# li.selected #}
                         <li>
-                            <a href="javascript:void(0);" class="single">更多</a>
+                            <a href="javascript:void(0);" class="single">1年以内</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">轿车</a>
+                            <a href="javascript:void(0);" class="single">1-3年</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">越野车/SUV</a>
+                            <a href="javascript:void(0);" class="single">3-5年</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">MPV</a>
+                            <a href="javascript:void(0);" class="single">5-8年</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">跑车</a>
+                            <a href="javascript:void(0);" class="single">8-10年</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="single">面包车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">皮卡</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">新能源</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">工程车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">货车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">客车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">三轮机动车</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">老年代步车</a>
+                            <a href="javascript:void(0);" class="single">10年以上</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="btn-back-wrapper">
+                <a href="javascript:;">返 回</a>
             </div>
         </div>
 
         {#  更多的更多 排量 #}
-        <div class="con-filter-wrapper hide js_con-filter-wrapper">
+        <div class="con-filter-wrapper  filter-more-content js_filter-more-content" id="filter-more-pailiang">
             <div class="con-filter-inner">
-                <div id="scroll-inner-4" class="scroll-inner js_scroll-inner">
+                <div id="scroll-inner-4-2" class="scroll-inner js_scroll-inner">
                     <ul>
                         <li>
                             <a href="javascript:void(0);" class="single">更多</a>
@@ -449,13 +440,16 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="btn-back-wrapper">
+                <a href="javascript:;">返 回</a>
             </div>
         </div>
 
         {#  更多的更多 里程 #}
-        <div class="con-filter-wrapper hide js_con-filter-wrapper">
+        <div class="con-filter-wrapper  filter-more-content js_filter-more-content" id="filter-more-licheng">
             <div class="con-filter-inner">
-                <div id="scroll-inner-4" class="scroll-inner js_scroll-inner">
+                <div id="scroll-inner-4-3" class="scroll-inner js_scroll-inner">
                     <ul>
                         <li>
                             <a href="javascript:void(0);" class="single">更多</a>
@@ -499,54 +493,114 @@
                     </ul>
                 </div>
             </div>
+            <div class="btn-back-wrapper">
+                <a href="javascript:;">返 回</a>
+            </div>
         </div>
 
         {#  更多的更多 颜色 #}
-        <div class="con-filter-wrapper hide js_con-filter-wrapper">
+        <div class="con-filter-wrapper  filter-more-content js_filter-more-content" id="filter-more-color">
             <div class="con-filter-inner">
-                <div id="scroll-inner-4" class="scroll-inner js_scroll-inner">
+                <div id="scroll-inner-4-4" class="scroll-inner js_scroll-inner">
                     <ul>
-                        <li>
-                            <a href="javascript:void(0);" class="single">更多</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">全部</a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">轿车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #29282c"></em>
+                                黑
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">越野车/SUV</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #fff"></em>
+                                白
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">MPV</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #ff2600"></em>
+                                红
+                            </a>
+                        </li class="filter_more_color">
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #e1e2e3"></em>
+                                灰
+                            </a>
+                        </li class="filter_more_color">
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #f6f6f6"></em>
+                                银
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">跑车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #3499ff"></em>
+                                蓝
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">面包车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #fffb01"></em>
+                                黄
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">皮卡</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #996600"></em>
+                                棕
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">新能源</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #00cb65"></em>
+                                绿
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">工程车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #fd7100"></em>
+                                橙
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">货车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #cc3599"></em>
+                                紫
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">客车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #F3EEAA"></em>
+                                香槟
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">三轮机动车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #ffcc01"></em>
+                                金
+                            </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" class="single">老年代步车</a>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #FFC0CB"></em>
+                                粉红
+                            </a>
+                        </li>
+                        <li class="filter_more_color">
+                            <a href="javascript:void(0);" class="single">
+                                <em style="background-color: #ffffff"></em>
+                                其它
+                            </a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="btn-back-wrapper">
+                <a href="javascript:;">返 回</a>
             </div>
         </div>
     </div>

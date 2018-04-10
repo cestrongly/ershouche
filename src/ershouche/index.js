@@ -7,6 +7,7 @@ import './../../asset/iconfont/iconfont.css'
 import './index.scss'
 
 import $ from './../../asset/js/jquery-3.2.1.min'
+import FaskClick from './../../asset/js/fastclick/lib/fastclick'
 import filter from './../../widget/filter/index.js'
 
 let Page = function () {
@@ -54,5 +55,6 @@ let Page = function () {
 }();
 
 $(function () {
+    FaskClick.attach(document.body);
     Page.init();
 });

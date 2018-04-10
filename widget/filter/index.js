@@ -116,7 +116,11 @@ let filter = function () {
         document.addEventListener('mousewheel', function (e) { e.preventDefault(); }, false);
 
         $('#mask').show();
-        $('.js_container').addClass('filter-fixed');
+        // $('.js_container').addClass('filter-fixed');
+        $(this).css({
+          'position': 'fixed',
+          'top': '0'
+        });
 
         var filter = this;
         // 点击目标
@@ -164,7 +168,7 @@ let filter = function () {
         myScroll_2.scrollToElement(selector, null, true, -48, null);
       });
 
-      $('.js_con-filter').on('touchend', '.js_letterlist', function (e) {
+      $('.js_con-filter').on('touchend', '.js_letter_list', function (e) {
         $(this).css({ 'background': '#fff' });
       });
     },
@@ -194,6 +198,8 @@ let filter = function () {
         $('.js_con-filter-wrapper').addClass('hide');
         $('.js_nav_filter').find('li').removeClass('active');
         $(mask).hide();
+
+        $('.js_filter').attr('style','');
 
         // 恢复默认事件 滑动
         document.addEventListener('touchmove', function (e) {

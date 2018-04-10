@@ -142,6 +142,9 @@ let filter = function () {
       })
     },
 
+    /**
+     * 滑动字母索引
+     */
     letterBoxTouchMove: function () {
       $('.js_con-filter').on('touchmove', '.js_letter_list', function (e) {
         let letterList = $('.js_container').find('.js_letter_list')[0];
@@ -173,6 +176,9 @@ let filter = function () {
       });
     },
 
+    /**
+     * 热门品牌点击
+     */
     hotBrandClick: function () {
       let self = this;
       $('.js_container').on('click touchend', '.js_hot_brand .title', function (e) {
